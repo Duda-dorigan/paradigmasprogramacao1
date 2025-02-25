@@ -1,4 +1,4 @@
-package Produtos;
+package exe3;
 
 public class TestaProduto {
     public static void main(String[] args) {

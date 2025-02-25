@@ -1,4 +1,4 @@
-package Produtos;
+package exe3;
 
 public class Produto {
     public int id;

@@ -1,4 +1,4 @@
-package Clientes;
+package exe2;
 
 public class Cliente {
     public int numeroConta;
