@@ -1,6 +1,6 @@
-package exe3;
+import exe3.Produto;
 
-public class TestaProduto {
+public class MainProduto {
     public static void main(String[] args) {
         Produto n1 = new  Produto();
         n1.comprar(4);

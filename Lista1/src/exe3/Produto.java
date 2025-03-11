@@ -1,9 +1,8 @@
 package exe3;
 
 public class Produto {
-    public int id;
+    public int id, quantidade;
     public String descricao;
-    public int quantidade;
     public float preco;
 
     public  Produto(int id, String descricao, int quantidade, float preco) {
@@ -14,23 +13,30 @@ public class Produto {
     }
 
     public  Produto() {
-        this.id = 0;
         this.descricao = "Sem descricao";
-        this.quantidade = 0;
-        this.preco = 0;
     }
 
     public void comprar(int quant){
         this.quantidade+=quant;
     }
     public void vender(int venda){
-        this.quantidade-=venda;
+        if (this.quantidade>=venda) {
+            this.quantidade -= venda;
+        }
+        else{
+            System.out.println("Estoque  insuficiente");
+        }
     }
     public void subir(float valor){
         this.preco+=valor;
     }
     public void descer(float valor){
-        this.preco-=valor;
+        if(this.preco>=valor) {
+            this.preco -= valor;
+        }
+        else{
+            System.out.println("Preço não pode ser negativo");
+        }
     }
     public void mostra(){
         System.out.println("ID: "+this.id

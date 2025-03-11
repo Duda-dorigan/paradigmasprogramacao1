@@ -1,6 +1,6 @@
-package exe2;
+import exe2.Cliente;
 
-public class TestaCliente {
+public class MainCliente {
     public static void main(String[] args) {
         Cliente num1 = new Cliente();
         num1.numeroConta = 25683;

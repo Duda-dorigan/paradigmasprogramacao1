@@ -13,27 +13,27 @@ public class Rio {
 
     public Rio(){
         this.nome = "Sem nome";
-        this.nivel = 0;
-        this.poluido = false;
     }
     public void chover(float elevacao){
         this.nivel += elevacao;
     }
     public void ensolarar(float queda){
-        this.nivel -= queda;
+        if (this.nivel >= queda) {
+            this.nivel -= queda;
+        }
+        else{
+            System.out.println("Nivel do rio não foi alterado");
+        }
     }
     public void limpar(){
-        if(this.poluido == true) {
-            this.poluido = false;
-        }
+        this.poluido = false;
     }
     public void sujar(){
-        if(this.poluido == false) {
-            this.poluido = true;
-        }
+        this.poluido = true;
     }
     public void mostra(){
         System.out.println("Nome: "+this.nome
-        +" Nivel: "+this.nivel+ " Poluido: "+this.poluido);
+        +" Nivel: "+this.nivel+ " Poluido: "+(this.poluido?"true":"false"));
     }
+
 }
